@@ -1,0 +1,18 @@
+{
+    "openapi": "1.0.0",
+    "info": {
+        "title": "Api Movies for Testing",
+        "description": "",
+        "version": "1.0.0"
+    },
+    "tags": [
+        {
+            "name": "Movie",
+            "description": "Movie"
+        },
+        {
+            "name" : "Detail",
+            "description" : "Detail"
+        }
+    ]
+}
