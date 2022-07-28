@@ -6,15 +6,15 @@ const logger = require('morgan');
 // const indexRouter = require('./routes/index');
 // const usersRouter = require('./routes/users');
 
-const swaggerUi = require('swagger-ui-express');
-const apiDocumentation = require('./docs.json');
-app.use('docs',swaggerUi.serve, swaggerUi.setup(apiDocumentation));
-
 const moviesRouter = require('./app/api/movies/router');
 
 const URL = '/api/v1';
 
 const app = express();
+
+const swaggerUi = require('swagger-ui-express');
+const apiDocumentation = require('./docs.json');
+app.use('/docs',swaggerUi.serve, swaggerUi.setup(apiDocumentation));
 
 app.use(logger('dev'));
 app.use(express.json());
