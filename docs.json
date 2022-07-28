@@ -7,12 +7,35 @@
     },
     "tags": [
         {
-            "name": "Movie",
-            "description": "Movie"
+            "name": "Movies",
+            "description": "Movies"
         },
         {
             "name" : "Detail",
             "description" : "Detail"
         }
-    ]
+    ],
+    "paths": {
+        "/users/{title}": {
+            "get": {
+                "tags": ["Movies"],
+                "summary": "Get movies in system",
+                "parameters":[
+                    {
+                        "in": "path",
+                        "name": "title",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Title movies"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Sukses"
+                    }
+                }
+            }
+        }
+    }
 }

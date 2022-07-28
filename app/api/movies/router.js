@@ -8,7 +8,7 @@ const { getMovie, getDetail } = require('./controller')
 //   res.json({message:'Loremp Ipsum Movies'})
 // });
 
-router.get('/movies/:tittle',getMovie);
+router.get('/movies/:title',getMovie);
 router.get('/movies/detail/:movieId',getDetail);
 
 module.exports = router;

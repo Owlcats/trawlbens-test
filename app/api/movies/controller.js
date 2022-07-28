@@ -2,11 +2,11 @@ const axios = require('axios');
 
 module.exports = {
     getMovie: async (req, res, next) => {
-        const {tittle} = req.params;
+        const {title} = req.params;
         const options = {
             method: 'GET',
             url: 'https://online-movie-database.p.rapidapi.com/auto-complete',
-            params: {q: tittle},
+            params: {q: title},
             headers: {
                 'X-RapidAPI-Key': '54cbdd15a6msh6376e4db31b3bc4p193363jsn79c029e590f8',
                 'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
@@ -18,8 +18,8 @@ module.exports = {
             const arr = [];
             for (let i = 0; i < list.length; ++i) {
                 const id = list[i].id;
-                const title = list[i].l;
-                arr.push({id,title});
+                const title2 = list[i].l;
+                arr.push({id,title2});
             }
             res.status(200).json({
                 message : 'SUKSES',
